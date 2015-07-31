@@ -55,7 +55,7 @@ ROOT_URLCONF = 'pageink.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.dirname(os.path.dirname(os.path.abspath('templates')))],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,8 +101,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 TEMPLATES_DIRS = (
-    'C:/Users/yogesh soni/Desktop/appink/templates',
-    'C:/Users/yogesh soni/Desktop/appink/templates/quiz',
+   # 'C:/Users/yogesh soni/Desktop/appink/templates',
+   # 'C:/Users/yogesh soni/Desktop/appink/templates/quiz',
     #'C:/Users/yogesh soni/Desktop/appink/templates/admin',
     #'C:/Users/yogesh soni/Desktop/appink/templates/quiz/quiz',
 )
@@ -112,8 +112,8 @@ STATICFILES_DIRS = (
    # '/var/www/static/',
 )
 MEDIA_DIRS = (
-    os.path.join(BASE_DIR, "media"),
-    '/var/www/media/',
+   # os.path.join(BASE_DIR, "media"),
+   # '/var/www/media/',
 )
 
 STATICFILES_FINDERS = (
@@ -127,5 +127,5 @@ TEMPLATE_LOADERS = (
 )
 
 STATIC_ROOT = os.path.join( os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static')
-MEDIA_ROOT = "/var/www/example.com/media/"
-MEDIA_URL =  '/media/'
+MEDIA_ROOT = ''
+MEDIA_URL =  ''
