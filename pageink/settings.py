@@ -108,8 +108,8 @@ TEMPLATES_DIRS = (
 )
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
+   # os.path.join(BASE_DIR, "static"),
+   # '/var/www/static/',
 )
 MEDIA_DIRS = (
     os.path.join(BASE_DIR, "media"),
@@ -126,6 +126,6 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 )
 
-STATIC_ROOT = os.path.dirname(os.path.dirname(os.path.abspath('static')))
+STATIC_ROOT = os.path.join( os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static')
 MEDIA_ROOT = "/var/www/example.com/media/"
 MEDIA_URL =  '/media/'
