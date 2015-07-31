@@ -126,6 +126,6 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 )
 
-STATIC_ROOT = os.path.dirname(os.path.dirname(os.path.abspath('templates')))
+STATIC_ROOT = os.path.dirname(os.path.dirname(os.path.abspath('static')))
 MEDIA_ROOT = "/var/www/example.com/media/"
 MEDIA_URL =  '/media/'
