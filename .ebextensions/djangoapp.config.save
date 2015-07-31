@@ -1,0 +1,14 @@
+option_settings:
+  - namespace: aws:elasticbeanstalk:container:python
+    option_name: WSGIPath
+    value: appink/wsgi.py
+  - namespace: aws:elasticbeanstalk:container:python:staticfiles           
+    option_name: /static/
+    value: static/
+  - option_name: DJANGO_SETTINGS_MODULE           
+    value: appink.settingsoption_settings:
+  "aws:elasticbeanstalk:application:environment":
+    DJANGO_SETTINGS_MODULE: "pageink.settings"
+    PYTHONPATH: "/opt/python/current/app/pageink:$PYTHONPATH"
+  "aws:elasticbeanstalk:container:python":
+    WSGIPath: "pageink/wsgi.py"

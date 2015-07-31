@@ -55,7 +55,7 @@ ROOT_URLCONF = 'pageink.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.dirname(os.path.dirname(os.path.abspath('templates')))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,5 +98,34 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
-
 STATIC_URL = '/static/'
+
+TEMPLATES_DIRS = (
+    'C:/Users/yogesh soni/Desktop/appink/templates',
+    'C:/Users/yogesh soni/Desktop/appink/templates/quiz',
+    #'C:/Users/yogesh soni/Desktop/appink/templates/admin',
+    #'C:/Users/yogesh soni/Desktop/appink/templates/quiz/quiz',
+)
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+)
+MEDIA_DIRS = (
+    os.path.join(BASE_DIR, "media"),
+    '/var/www/media/',
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+)
+
+STATIC_ROOT = os.path.dirname(os.path.dirname(os.path.abspath('templates')))
+MEDIA_ROOT = "/var/www/example.com/media/"
+MEDIA_URL =  '/media/'
